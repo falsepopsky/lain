@@ -1,0 +1,48 @@
+{
+  "name": "@untidy/animeflv",
+  "description": "web scraping tools for animeflv site",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "keywords": [
+    "animeflv"
+  ],
+  "author": "falsepopsky",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "tsx ./src/playground.ts",
+    "clean:build": "rm -rf dist",
+    "clean:workspace": "rm -rf node_modules dist .turbo",
+    "prebuild": "pnpm run clean:build",
+    "build": "tsc --project tsconfig.build.json"
+  },
+  "devDependencies": {
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/falsepopsky/lain.git",
+    "directory": "packages/animeflv"
+  },
+  "bugs": {
+    "url": "https://github.com/falsepopsky/lain/issues"
+  }
+}

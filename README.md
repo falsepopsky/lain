@@ -1,5 +1,7 @@
 # lain
 
+Monorepo for web scraping anime sites
+
 ## :scroll: License
 
 `lain` and their packages are licensed under the

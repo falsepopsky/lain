@@ -18,5 +18,7 @@
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "lib": ["ESNext"]
-  }
+  },
+  "include": [".eslintrc.cjs"],
+  "exclude": ["node_modules"]
 }

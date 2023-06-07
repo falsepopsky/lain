@@ -24,5 +24,5 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['/*', '!/packages'],
+  ignorePatterns: ['/*', '/packages/eslint-config-lain', '!/packages'],
 };

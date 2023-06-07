@@ -1,2 +1,4 @@
 packages:
-  - 'packages/*'
+  - 'packages/eslint-config-lain'
+  - 'packages/animeflv'
+  - 'packages/jkanime'

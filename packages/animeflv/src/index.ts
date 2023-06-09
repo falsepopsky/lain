@@ -1,1 +1,1 @@
-export { createFiltered, createTitle } from './url.js';
+export { browseAnime, browseFilter } from './url.js';

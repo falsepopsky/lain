@@ -56,7 +56,7 @@ export interface Options {
   order?: OrderKeys;
 }
 
-export function createFiltered(options: Options): string {
+export function browseFilter(options: Options): string {
   const query = new URL('browse', 'https://www3.animeflv.net/');
 
   if (typeof options === 'object' && !Array.isArray(options)) {
@@ -74,7 +74,7 @@ export function createFiltered(options: Options): string {
   return query.href;
 }
 
-export function createTitle(title: string) {
+export function browseAnime(title: string) {
   const query = new URL('browse', 'https://www3.animeflv.net/');
 
   if (typeof title === 'string' && title.length != 0) {

@@ -53,7 +53,7 @@ export interface Options {
   year?: string | string[];
   type?: TypeKeys | TypeKeys[];
   status?: StatusKeys | StatusKeys[];
-  order?: OrderKeys | OrderKeys[];
+  order?: OrderKeys;
 }
 
 export function createFiltered(options: Options): string {

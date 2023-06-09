@@ -10,15 +10,15 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE.md"
+    "LICENSE"
   ],
   "keywords": [
     "animeflv"
   ],
   "author": "falsepopsky",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "scripts": {
-    "dev": "tsx ./src/play.ts",
+    "dev": "tsx ./src/playground.ts",
     "clean:build": "rm -rf dist",
     "clean:workspace": "rm -rf dist .turbo",
     "prebuild": "pnpm run clean:build",

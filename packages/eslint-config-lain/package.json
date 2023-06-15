@@ -9,10 +9,10 @@
   "main": "index.cjs",
   "exports": "./index.cjs",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.9",
-    "@typescript-eslint/parser": "^5.59.9",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-config-turbo": "^1.10.2",
+    "eslint-config-turbo": "^1.10.3",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "^27.2.1",

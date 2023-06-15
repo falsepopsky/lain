@@ -10,13 +10,13 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE.md"
+    "LICENSE"
   ],
   "keywords": [
     "jkanime"
   ],
   "author": "falsepopsky",
-  "license": "GPL-3.0-or-later",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "tsx ./src/playground.ts",
     "clean:build": "rm -rf dist",

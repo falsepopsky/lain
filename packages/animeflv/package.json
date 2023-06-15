@@ -9,8 +9,8 @@
   "exports": "./dist/index.js",
   "files": [
     "dist",
-    "README.md",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "keywords": [
     "animeflv"

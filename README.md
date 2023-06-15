@@ -1,6 +1,6 @@
 # lain
 
-Monorepo for web scraping anime sites
+Monorepo containing web scraping tools for anime sites.
 
 ## :scroll: License
 

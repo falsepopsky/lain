@@ -1,10 +1,15 @@
 {
   "name": "lain",
-  "description": "Monorepo for web scraping anime sites",
   "private": true,
   "type": "module",
-  "author": "falsepopsky",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
+  "workspaces": {
+    "packages": [
+      "packages/eslint-config-lain",
+      "packages/animeflv",
+      "packages/jkanime"
+    ]
+  },
   "scripts": {
     "format": "prettier --cache -w .",
     "lint": "eslint . --cache --cache-location \"./node_modules/.cache/eslint/\"",
@@ -16,32 +21,20 @@
     "test:coverage": "jest --coverage",
     "preinstall": "npx only-allow pnpm"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "devDependencies": {
-    "@swc/core": "^1.3.60",
+    "@swc/core": "^1.3.64",
     "@swc/jest": "^0.2.26",
-    "@types/jest": "^29.5.1",
-    "@types/node": "^20.2.4",
-    "eslint": "^8.41.0",
-    "eslint-config-lain": "workspace:^1.0.0",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "eslint": "^8.42.0",
+    "eslint-config-lain": "workspace:^",
     "jest": "^29.5.0",
     "prettier": "^2.8.8",
-    "turbo": "^1.9.9",
-    "typescript": "^5.0.4"
+    "turbo": "^1.10.3",
+    "typescript": "^5.1.3"
   },
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/falsepopsky/lain.git"
-  },
-  "bugs": {
-    "url": "https://github.com/falsepopsky/lain/issues"
   }
 }

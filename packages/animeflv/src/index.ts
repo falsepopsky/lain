@@ -1,3 +1,1 @@
-export function stress(a: boolean): string {
-  return a ? 'I am stressed' : 'I am not stressed';
-}
+export { animeSlug, browseAnime, browseFilter, verSlugEpisode } from './url.js';

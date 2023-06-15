@@ -74,7 +74,7 @@ export function browseFilter(options: Options): string {
   return query.href;
 }
 
-export function browseAnime(title: string) {
+export function browseAnime(title: string): string {
   const query = new URL('browse', 'https://www3.animeflv.net/');
 
   if (typeof title === 'string' && title.length != 0) {
@@ -82,4 +82,12 @@ export function browseAnime(title: string) {
   }
 
   return query.href;
+}
+
+export function animeSlug(slug: string): string {
+  return 'https://www3.animeflv.net/anime/' + slug;
+}
+
+export function verSlugEpisode(slug: string, episode: string): string {
+  return `https://www3.animeflv.net/ver/${slug}-${episode}`;
 }

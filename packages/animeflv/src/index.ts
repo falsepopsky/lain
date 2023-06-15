@@ -1,1 +1,1 @@
-export { browseAnime, browseFilter } from './url.js';
+export { animeSlug, browseAnime, browseFilter, verSlugEpisode } from './url.js';

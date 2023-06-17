@@ -5,6 +5,14 @@ describe('browseAnime()', () => {
     expect(browseAnime('cowboy bebop')).toBe('https://www3.animeflv.net/browse?q=cowboy+bebop');
   });
 
+  it('returns with query q and page', () => {
+    expect(browseAnime('the', '2')).toBe('https://www3.animeflv.net/browse?q=the&page=2');
+  });
+
+  it('returns with query page', () => {
+    expect(browseAnime('', '2')).toBe('https://www3.animeflv.net/browse?page=2');
+  });
+
   it('returns the browse path without any query parameters', () => {
     // @ts-expect-error: Expected 1 arguments, but got 0.
     expect(browseAnime()).toBe('https://www3.animeflv.net/browse');
@@ -54,11 +62,15 @@ describe('browseFilter()', () => {
     expect(browseFilter({ order: 'updated' })).toBe('https://www3.animeflv.net/browse?order=updated');
   });
 
-  it('returns with query genre, year, type, status and order', () => {
+  it('returns with query page', () => {
+    expect(browseFilter({ page: '2' })).toBe('https://www3.animeflv.net/browse?page=2');
+  });
+
+  it('returns with query genre, year, type, status , order and page', () => {
     expect(
-      browseFilter({ genre: ['parodia', 'policia'], type: 'tv', year: '2000', status: '2', order: 'rating' })
+      browseFilter({ genre: ['parodia', 'policia'], type: 'tv', year: '2000', status: '2', order: 'rating', page: '4' })
     ).toBe(
-      'https://www3.animeflv.net/browse?genre%5B%5D=parodia&genre%5B%5D=policia&type=tv&year=2000&status=2&order=rating'
+      'https://www3.animeflv.net/browse?genre%5B%5D=parodia&genre%5B%5D=policia&type=tv&year=2000&status=2&order=rating&page=4'
     );
   });
 

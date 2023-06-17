@@ -54,6 +54,12 @@ export interface Options {
   type?: TypeKeys | TypeKeys[];
   status?: StatusKeys | StatusKeys[];
   order?: OrderKeys;
+  page?: string;
+}
+
+export interface TitleOptions {
+  title: string;
+  page?: string;
 }
 
 export function browseFilter(options: Options): string {
@@ -74,11 +80,15 @@ export function browseFilter(options: Options): string {
   return query.href;
 }
 
-export function browseAnime(title: string): string {
+export function browseAnime(title: string, page?: string): string {
   const query = new URL('browse', 'https://www3.animeflv.net/');
 
   if (typeof title === 'string' && title.length != 0) {
     query.searchParams.set('q', title);
+  }
+
+  if (typeof page === 'string' && page.length != 0) {
+    query.searchParams.set('page', page);
   }
 
   return query.href;

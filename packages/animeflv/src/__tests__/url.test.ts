@@ -1,4 +1,4 @@
-import { animeSlug, browseAnime, browseFilter, verSlugEpisode } from './index.js';
+import { animeSlug, browseAnime, browseFilter, verSlugEpisode } from '../index.js';
 
 describe('browseAnime()', () => {
   it('returns with query q', () => {

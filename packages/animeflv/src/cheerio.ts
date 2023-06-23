@@ -13,7 +13,7 @@ export interface TitleWithPages {
   pages: string[];
 }
 
-export function browse(html: string, page?: boolean): Title[] | TitleWithPages {
+export function browse<P extends boolean = false>(html: string, page?: P): P extends true ? TitleWithPages : Title[] {
   const data: Title[] = [];
   const pages: string[] = [];
   const cheerioInstance = load(html);
@@ -38,8 +38,8 @@ export function browse(html: string, page?: boolean): Title[] | TitleWithPages {
       }
     });
 
-    return { data, pages };
+    return { data, pages } as P extends true ? TitleWithPages : never;
   } else {
-    return data;
+    return data as P extends true ? never : Title[];
   }
 }

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es2022",
     "module": "Node16",
     "moduleResolution": "node16",
     "rootDir": ".",
@@ -17,7 +17,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
-    "lib": ["ESNext"],
+    "lib": ["es2023"],
     "verbatimModuleSyntax": true
   },
   "include": [".eslintrc.cjs"],

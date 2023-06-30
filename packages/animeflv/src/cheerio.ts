@@ -8,14 +8,8 @@ export interface Title {
   cover: string;
 }
 
-export interface TitleWithPages {
-  data: Title[];
-  pages: string[];
-}
-
-export function browse<P extends boolean = false>(html: string, page?: P): P extends true ? TitleWithPages : Title[] {
-  const data: Title[] = [];
-  const pages: string[] = [];
+export function getTitles(html: string): Title[] {
+  const titles: Title[] = [];
   const cheerioInstance = load(html);
 
   cheerioInstance('.ListAnimes li').each((_i, node) => {
@@ -25,21 +19,24 @@ export function browse<P extends boolean = false>(html: string, page?: P): P ext
     const type = cheerioInstance(node).find('.Image span').text();
     const cover = cheerioInstance(node).find('img').attr('src') ?? '';
 
-    data.push({ title, description, slug, type, cover });
+    titles.push({ title, description, slug, type, cover });
   });
 
-  if (typeof page === 'boolean' && page) {
-    cheerioInstance('.pagination li a').each((_i, node) => {
-      const path = cheerioInstance(node).attr('href');
-      const duplicate = pages.some((p) => p === path);
+  return titles;
+}
 
-      if (typeof path === 'string' && path !== '#' && !duplicate) {
-        pages.push(path);
-      }
-    });
+export function getPages(html: string): string[] {
+  const pages: string[] = [];
+  const cheerioInstance = load(html);
 
-    return { data, pages } as P extends true ? TitleWithPages : never;
-  } else {
-    return data as P extends true ? never : Title[];
-  }
+  cheerioInstance('.pagination li a').each((_i, node) => {
+    const path = cheerioInstance(node).attr('href');
+    const duplicate = pages.some((p) => p === path);
+
+    if (typeof path === 'string' && path !== '#' && !duplicate) {
+      pages.push(path);
+    }
+  });
+
+  return pages;
 }

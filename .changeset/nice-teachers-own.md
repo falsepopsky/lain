@@ -2,4 +2,4 @@
 '@untidy/animeflv': minor
 ---
 
-feat: get titles from browse path with cheerio
+feat: add getTitles() for cheerio

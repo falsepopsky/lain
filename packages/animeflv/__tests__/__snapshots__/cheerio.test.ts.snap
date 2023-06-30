@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`browse() Fixture browse Should return titles 1`] = `
+exports[`getTitles() Fixture browse Should return titles 1`] = `
 [
   {
     "cover": "https://animeflv.net/uploads/animes/covers/3816.jpg",
@@ -173,7 +173,7 @@ exports[`browse() Fixture browse Should return titles 1`] = `
 ]
 `;
 
-exports[`browse() Fixture browse-query Should return titles 1`] = `
+exports[`getTitles() Fixture browse-query Should return titles 1`] = `
 [
   {
     "cover": "https://animeflv.net/uploads/animes/covers/1488.jpg",
@@ -227,7 +227,7 @@ exports[`browse() Fixture browse-query Should return titles 1`] = `
 ]
 `;
 
-exports[`browse() Fixture browse-query-page-10 Should return titles 1`] = `
+exports[`getTitles() Fixture browse-query-page-10 Should return titles 1`] = `
 [
   {
     "cover": "https://animeflv.net/uploads/animes/covers/3729.jpg",

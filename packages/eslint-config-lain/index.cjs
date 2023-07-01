@@ -72,6 +72,7 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
     '@typescript-eslint/strict-boolean-expressions': 'error',
+    '@typescript-eslint/no-import-type-side-effects': 'error',
   },
   reportUnusedDisableDirectives: true,
 };

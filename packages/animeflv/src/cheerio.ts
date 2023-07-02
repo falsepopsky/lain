@@ -11,6 +11,11 @@ export interface Title extends TitleMobile {
   description: string;
 }
 
+/**
+ * @description Retrieves the titles for the path "browse" on the desktop site.
+ * @param html - Plain html text.
+ * @returns Returns an Array of objects with the following properties: `title`, `slug`, `type`, `description` and `cover`.
+ */
 export function getTitles(html: string): Title[] {
   const titles: Title[] = [];
   const cheerioInstance = load(html);
@@ -28,6 +33,11 @@ export function getTitles(html: string): Title[] {
   return titles;
 }
 
+/**
+ * @description Retrieves the titles for the path "browse" on the mobile site.
+ * @param html - Plain html text.
+ * @returns Returns an Array of objects with the following properties: `title`, `slug`, `type` and `cover`.
+ */
 export function getTitlesMobile(html: string): TitleMobile[] {
   const titles: TitleMobile[] = [];
   const cheerioInstance = load(html);
@@ -44,6 +54,12 @@ export function getTitlesMobile(html: string): TitleMobile[] {
   return titles;
 }
 
+/**
+ * @description Allows retrieving the pagination for the path "browse". Works on desktop and mobile site.
+ * @param html - Plain html text.
+ * @returns Returns an array from the pagination containing suffix pages.
+ * Example: ['/browse?page=1', '/browse?page=2']
+ */
 export function getPages(html: string): string[] {
   const pages: string[] = [];
   const cheerioInstance = load(html);

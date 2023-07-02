@@ -148,3 +148,211 @@ exports[`getTitlesMobile() Fixture browse Should return titles 1`] = `
   },
 ]
 `;
+
+exports[`getTitlesMobile() Fixture browse-query Should return titles 1`] = `
+[
+  {
+    "cover": "/uploads/animes/covers/752.jpg",
+    "slug": "/anime/saint-seiya-omega",
+    "title": "Saint Seiya Omega",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/1573.jpg",
+    "slug": "/anime/saint_seiya_legend_of_sanctuary",
+    "title": "Saint Seiya: Legend of Sanctuary",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/330.jpg",
+    "slug": "/anime/saint-seiya-the-lost-canvas",
+    "title": "Saint Seiya: The Lost Canvas",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3060.jpg",
+    "slug": "/anime/saint-seiya-saintia-shou",
+    "title": "Saint Seiya: Saintia Shou",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/328.jpg",
+    "slug": "/anime/saint-seiya-the-hades-chapter-inferno",
+    "title": "Saint Seiya: The Hades Chapter - Inferno",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/1966.jpg",
+    "slug": "/anime/saint-seiya-soul-of-gold",
+    "title": "Saint Seiya: Soul of Gold",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/327.jpg",
+    "slug": "/anime/saint-seiya-the-hades-chapter-elysion",
+    "title": "Saint Seiya: The Hades Chapter - Elysion",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/326.jpg",
+    "slug": "/anime/saint-seya",
+    "title": "Saint Seiya",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/329.jpg",
+    "slug": "/anime/saint-seiya-the-hades-chapter-sanctuary",
+    "title": "Saint Seiya: The Hades Chapter - Sanctuary",
+    "type": "OVA",
+  },
+]
+`;
+
+exports[`getTitlesMobile() Fixture browse-query-page-10 Should return titles 1`] = `
+[
+  {
+    "cover": "/uploads/animes/covers/1366.jpg",
+    "slug": "/anime/gekijouban-slayers",
+    "title": "Gekijouban Slayers",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/1394.jpg",
+    "slug": "/anime/lupin-sansei-vs-meitantei-conan-the-movie",
+    "title": "Lupin Sansei vs. Meitantei Conan The Movie",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/1407.jpg",
+    "slug": "/anime/mobile-suit-gundam-the-08th-ms-team",
+    "title": "Mobile Suit Gundam: The 08th MS Team",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/1577.jpg",
+    "slug": "/anime/saiunkoku-monogatari",
+    "title": "Saiunkoku Monogatari",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/1851.jpg",
+    "slug": "/anime/mobile-suit-gundam-0080-war-in-the-pocket",
+    "title": "Mobile Suit Gundam 0080: War in the Pocket",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/681.jpg",
+    "slug": "/anime/megaman-maverick-hunter-x-the-day-of-sigma",
+    "title": "MegaMan Maverick Hunter X The Day of Sigma",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/384.jpg",
+    "slug": "/anime/kami-nomi-zo-shiru-sekai-2",
+    "title": "Kami Nomi zo Shiru Sekai 2",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3469.jpg",
+    "slug": "/anime/osananajimi-ga-zettai-ni-makenai-love-comedy",
+    "title": "Osananajimi ga Zettai ni Makenai Love Comedy",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3672.jpg",
+    "slug": "/anime/totsukuni-no-shoujo-2022",
+    "title": "Totsukuni no Shoujo (2022)",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/1485.jpg",
+    "slug": "/anime/tsubasa-chronicle-tori-kago-no-kuni-no-himegimi",
+    "title": "Tsubasa Chronicle: Tori Kago no Kuni no Himegimi",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/1732.jpg",
+    "slug": "/anime/detective-conan-movie-18",
+    "title": "Detective Conan Movie 18: The Sniper from Another Dimension",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/2546.jpg",
+    "slug": "/anime/danganronpa-3-the-end-of-kibougamine-gakuen-kibou-hen",
+    "title": "Danganronpa 3: The End of Kibougamine Gakuen - Kibou-hen",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/2771.jpg",
+    "slug": "/anime/ballroom-e-youkoso",
+    "title": "Ballroom e Youkoso",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/2829.jpg",
+    "slug": "/anime/mahoutsukai-no-yome",
+    "title": "Mahoutsukai no Yome",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/392.jpg",
+    "slug": "/anime/hidan-no-aria",
+    "title": "Hidan no Aria",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3407.jpg",
+    "slug": "/anime/sk",
+    "title": "SK∞",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/1393.jpg",
+    "slug": "/anime/the-law-of-ueki",
+    "title": "The Law of Ueki",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/2117.jpg",
+    "slug": "/anime/the-idolmaster-cinderella-girls-2",
+    "title": "The IDOLM@STER: Cinderella Girls 2nd Season",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/2331.jpg",
+    "slug": "/anime/strike-the-blood-valkyria-no-oukoku-hen",
+    "title": "Strike the Blood: Valkyria no Oukoku-hen",
+    "type": "OVA",
+  },
+  {
+    "cover": "/uploads/animes/covers/2428.jpg",
+    "slug": "/anime/concrete-revolutio-choujin-gensou-the-last-song",
+    "title": "Concrete Revolutio: Choujin Gensou - The Last Song",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3084.jpg",
+    "slug": "/anime/yakusoku-no-neverland",
+    "title": "Yakusoku no Neverland",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/67.jpg",
+    "slug": "/anime/shigofumi",
+    "title": "Shigofumi",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/292.jpg",
+    "slug": "/anime/ghost-in-the-shell-stand-alone-complex",
+    "title": "Ghost in the Shell: Stand Alone Complex",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/853.jpg",
+    "slug": "/anime/shinsekai-yori",
+    "title": "Shinsekai yori",
+    "type": "Anime",
+  },
+]
+`;

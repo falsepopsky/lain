@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getTitlesMobile() Fixture browse Should return titles 1`] = `
+[
+  {
+    "cover": "/uploads/animes/covers/3821.jpg",
+    "slug": "/anime/ayaka",
+    "title": "Ayaka",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3820.jpg",
+    "slug": "/anime/ryza-no-atelier-tokoyami-no-joou-to-himitsu-no-kakurega",
+    "title": "Ryza no Atelier: Tokoyami no Joou to Himitsu no Kakurega",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3822.jpg",
+    "slug": "/anime/uchi-no-kaisha-no-chiisai-senpai-no-hanashi",
+    "title": "Uchi no Kaisha no Chiisai Senpai no Hanashi",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3819.jpg",
+    "slug": "/anime/horimiya-piece",
+    "title": "Horimiya: Piece",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3818.jpg",
+    "slug": "/anime/bang-dream-its-mygo",
+    "title": "BanG Dream! It's MyGO!!!!!",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3817.jpg",
+    "slug": "/anime/genjitsu-no-yohane-sunshine-in-the-mirror",
+    "title": "Genjitsu no Yohane: Sunshine in the Mirror",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3816.jpg",
+    "slug": "/anime/black-clover-mahou-tei-no-ken",
+    "title": "Black Clover: Mahou Tei no Ken",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/3815.jpg",
+    "slug": "/anime/5toubun-no-hanayome-movie",
+    "title": "5-toubun no Hanayome Movie",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/3813.jpg",
+    "slug": "/anime/kimi-wo-aishita-hitori-no-boku-e",
+    "title": "Kimi wo Aishita Hitori no Boku e",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/3814.jpg",
+    "slug": "/anime/boku-ga-aishita-subete-no-kimi-e",
+    "title": "Boku ga Aishita Subete no Kimi e",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/3812.jpg",
+    "slug": "/anime/tensei-shitara-slime-datta-ken-movie-guren-no-kizunahen",
+    "title": "Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/3811.jpg",
+    "slug": "/anime/niehime-to-kemono-no-ou",
+    "title": "Niehime to Kemono no Ou",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3810.jpg",
+    "slug": "/anime/watashi-ni-tenshi-ga-maiorita-precious-friends",
+    "title": "Watashi ni Tenshi ga Maiorita! Precious Friends",
+    "type": "Película",
+  },
+  {
+    "cover": "/uploads/animes/covers/3809.jpg",
+    "slug": "/anime/ousama-ranking-yuuki-no-takarabako",
+    "title": "Ousama Ranking: Yuuki no Takarabako",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3806.jpg",
+    "slug": "/anime/majutsushi-orphen-hagure-tabi-seiikihen",
+    "title": "Majutsushi Orphen Hagure Tabi: Seiiki-hen",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3808.jpg",
+    "slug": "/anime/oshi-no-ko",
+    "title": "[Oshi No Ko]",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3807.jpg",
+    "slug": "/anime/the-idolmster-cinderella-girls-u149",
+    "title": "The IDOLM@STER Cinderella Girls: U149",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3805.jpg",
+    "slug": "/anime/the-marginal-service",
+    "title": "The Marginal Service",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3803.jpg",
+    "slug": "/anime/dead-mount-death-play",
+    "title": "Dead Mount Death Play",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3804.jpg",
+    "slug": "/anime/kimi-wa-houkago-insomnia",
+    "title": "Kimi wa Houkago Insomnia",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3802.jpg",
+    "slug": "/anime/kanojo-ga-koushakutei-ni-itta-riyuu",
+    "title": "Kanojo ga Koushaku-tei ni Itta Riyuu",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3801.jpg",
+    "slug": "/anime/kimetsu-no-yaiba-katanakaji-no-satohen",
+    "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3800.jpg",
+    "slug": "/anime/world-dai-star",
+    "title": "World Dai Star",
+    "type": "Anime",
+  },
+  {
+    "cover": "/uploads/animes/covers/3799.jpg",
+    "slug": "/anime/isekai-shoukan-wa-nidome-desu",
+    "title": "Isekai Shoukan wa Nidome desu",
+    "type": "Anime",
+  },
+]
+`;

@@ -62,6 +62,11 @@ export interface TitleOptions {
   page?: string;
 }
 
+/**
+ * @description Generates a URL for applying filters.
+ * @param options - An object containing the filter options.
+ * @returns The URL with the supported filter queries applied.
+ */
 export function browseFilter(options: Options): string {
   const query = new URL('browse', 'https://www3.animeflv.net/');
 
@@ -80,6 +85,12 @@ export function browseFilter(options: Options): string {
   return query.href;
 }
 
+/**
+ * @description Generates a URL for browsing a specific title/anime.
+ * @param title - The name of the title/anime.
+ * @param page - Optional. The page number for pagination.
+ * @returns The URL with the query parameters for the specified title/anime.
+ */
 export function browseAnime(title: string, page?: string): string {
   const query = new URL('browse', 'https://www3.animeflv.net/');
 
@@ -92,12 +103,4 @@ export function browseAnime(title: string, page?: string): string {
   }
 
   return query.href;
-}
-
-export function animeSlug(slug: string): string {
-  return 'https://www3.animeflv.net/anime/' + slug;
-}
-
-export function verSlugEpisode(slug: string, episode: string): string {
-  return `https://www3.animeflv.net/ver/${slug}-${episode}`;
 }

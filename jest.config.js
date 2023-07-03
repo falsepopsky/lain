@@ -14,5 +14,5 @@ export default {
   transform: {
     '^.+\\.m?[tj]s?$': '@swc/jest',
   },
-  collectCoverageFrom: ['packages/*/src/*.ts', '!packages/*/src/*.d.ts'],
+  collectCoverageFrom: ['packages/*/src/*.ts', '!packages/*/src/*.d.ts', '!packages/*/src/playground.ts'],
 };

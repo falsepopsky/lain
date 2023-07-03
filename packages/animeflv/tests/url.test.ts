@@ -1,4 +1,4 @@
-import { animeSlug, browseAnime, browseFilter, verSlugEpisode } from '../src/index.js';
+import { browseAnime, browseFilter } from '../src/index.js';
 
 describe('browseAnime()', () => {
   it('returns with query q', () => {
@@ -77,17 +77,5 @@ describe('browseFilter()', () => {
   it('returns the browse path without any query parameters', () => {
     // @ts-expect-error: Expected 1 arguments, but got 0.
     expect(browseFilter()).toBe('https://www3.animeflv.net/browse');
-  });
-});
-
-describe('animeSlug()', () => {
-  it('returns slug with path anime', () => {
-    expect(animeSlug('dr-stone-new-world')).toBe('https://www3.animeflv.net/anime/dr-stone-new-world');
-  });
-});
-
-describe('verSlugEpisode()', () => {
-  it('returns slug with path ver', () => {
-    expect(verSlugEpisode('dr-stone-new-world', '10')).toBe('https://www3.animeflv.net/ver/dr-stone-new-world-10');
   });
 });

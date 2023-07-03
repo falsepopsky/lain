@@ -1,2 +1,2 @@
-export { getPages, getTitles } from './cheerio.js';
-export { animeSlug, browseAnime, browseFilter, verSlugEpisode } from './url.js';
+export { getInformationMobile, getPages, getTitles, getTitlesMobile } from './cheerio.js';
+export { browseAnime, browseFilter } from './url.js';

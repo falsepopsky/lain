@@ -18,6 +18,10 @@ module.exports = {
       extends: ['plugin:jest/recommended', 'plugin:jest/style'],
       files: ['**/*.test.ts', '**/*.spec.ts'],
     },
+    {
+      extends: ['plugin:jsdoc/recommended-typescript-error'],
+      files: ['packages/*/src/*.ts'],
+    },
   ],
   rules: {
     '@typescript-eslint/no-use-before-define': [

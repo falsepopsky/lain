@@ -1,5 +1,5 @@
-import { MobileBQ, MobileBQPT, MobileBrowse, MobileFake } from '../fixtures/index.js';
-import { getPages, getTitlesMobile } from '../src/index.js';
+import { MobileAE, MobileAF, MobileBQ, MobileBQPT, MobileBrowse, MobileFake, animeFake } from '../fixtures/index.js';
+import { getInformationMobile, getPages, getTitlesMobile } from '../src/index.js';
 
 describe('getTitlesMobile()', () => {
   describe('Fixture browse', () => {
@@ -141,6 +141,66 @@ describe('getPages()', () => {
       const uniquePages = Array.from(new Set(pages));
 
       expect(uniquePages).toEqual(pages);
+    });
+  });
+});
+
+describe('getInformationMobile()', () => {
+  describe('Fixture: anime en emision', () => {
+    const information = getInformationMobile(MobileAE);
+
+    it('Returns an array containing the episodes', () => {
+      expect(Array.isArray(information.episodes)).toBe(true);
+      expect(information.episodes).toHaveLength(1);
+    });
+
+    it('Returns an array containing the genres', () => {
+      expect(Array.isArray(information.genres)).toBe(true);
+      expect(information.genres).toHaveLength(3);
+    });
+
+    it('Should match title, status, description and cover', () => {
+      expect(information.title).toBe('Mushoku Tensei II: Isekai Ittara Honki Dasu');
+      expect(information.status).toBe('En emisión');
+      expect(information.description).toBe('Segunda temporada de Mushoku Tensei: Isekai Ittara Honki Dasu');
+      expect(information.cover).toBe('/uploads/animes/covers/3825.jpg');
+    });
+  });
+
+  describe('Fixture: anime finalizado', () => {
+    const information = getInformationMobile(MobileAF);
+
+    it('Returns an array containing the episodes', () => {
+      expect(Array.isArray(information.episodes)).toBe(true);
+      expect(information.episodes).toHaveLength(114);
+    });
+
+    it('Returns an array containing the genres', () => {
+      expect(Array.isArray(information.genres)).toBe(true);
+      expect(information.genres).toHaveLength(4);
+    });
+
+    it('Should match title, status, description and cover', () => {
+      expect(information.title).toBe('Saint Seiya');
+      expect(information.status).toBe('Finalizado');
+      expect(information.description).toBe(
+        `Cuenta la historia de un grupo de jóvenes guerreros denominados Santos (o caballeros en varias traducciones), quienes luchan por proteger a la diosa griega Atenea de las fuerzas del mal. Para luchar, los Santos sólo utilizan su energía interior (denominada cosmos), sus puños y armaduras que les sirven de protección y que además están inspiradas en constelaciones o seres de la mitología griega y escandinava.`
+      );
+      expect(information.cover).toBe('/uploads/animes/covers/326.jpg');
+    });
+  });
+
+  describe('Fixture: anime fake', () => {
+    const information = getInformationMobile(animeFake);
+
+    it("Should return an empty string if there's no cover", () => {
+      expect(information.cover).toBe('');
+    });
+
+    it('Should return an array containing the episodes, but it should be an empty string', () => {
+      expect(Array.isArray(information.episodes)).toBe(true);
+      expect(information.episodes).toHaveLength(1);
+      expect(information.episodes[0]).toBe('');
     });
   });
 });

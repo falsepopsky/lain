@@ -11,6 +11,42 @@ export interface Title extends TitleMobile {
   description: string;
 }
 
+type InformationOmit = Omit<Title, 'slug' | 'type'>;
+
+export interface InformationMobile extends InformationOmit {
+  status: string;
+  genres: string[];
+  episodes: string[];
+}
+
+/**
+ * @description Retrieves the information of the title/anime for the path "anime" on the mobile site.
+ * @param html - Plain html text.
+ * @returns Returns an object containing the following properties: `title`, `cover`, `genres`, `status`, `description` and `episodes`.
+ */
+export function getInformationMobile(html: string): InformationMobile {
+  const cheerioInstance = load(html);
+  const genres: string[] = [];
+  const episodes: string[] = [];
+
+  const title = cheerioInstance('h1').text();
+  const status = cheerioInstance('.Anime header p:eq(0) strong:eq(1)').text();
+  const description = cheerioInstance('.Anime header p:eq(1)').text().replace('Sinopsis:', '');
+  const cover = cheerioInstance('.Anime img').attr('src') ?? '';
+
+  cheerioInstance('.Tag').each((_i, node) => {
+    const genre = cheerioInstance(node).text();
+    genres.push(genre);
+  });
+
+  cheerioInstance('.Episode a').each((_i, node) => {
+    const episode = cheerioInstance(node).attr('href') ?? '';
+    episodes.push(episode);
+  });
+
+  return { title, description, status, cover, genres, episodes };
+}
+
 /**
  * @description Retrieves the titles for the path "browse" on the desktop site.
  * @param html - Plain html text.

@@ -19,7 +19,8 @@
     "build": "turbo build --filter=!eslint-config-lain",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",

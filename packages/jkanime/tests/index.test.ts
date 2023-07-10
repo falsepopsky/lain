@@ -1,4 +1,4 @@
-import { youAre } from './index.js';
+import { youAre } from '../src/index.js';
 
 describe('youAre()', () => {
   it('should be alone', () => {

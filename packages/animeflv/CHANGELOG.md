@@ -1,5 +1,11 @@
 # @untidy/animeflv
 
+## 0.1.1
+
+### Patch Changes
+
+- 46d5716: - Allow the user in `browseAnime()` and `browseFilter` to set the origin URL (desktop or mobile)
+
 ## 0.1.0
 
 ### Minor Changes

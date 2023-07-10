@@ -51,6 +51,13 @@ export type TypeKeys = 'tv' | 'special' | 'movie' | 'ova';
  */
 export type StatusKeys = '1' | '2' | '3';
 
+/**
+ - default = Por Defecto
+ - updated = Recientemente Actualizados
+ - added = Recientemente Agregados
+ - title = Nombre A-Z
+ - rating = Calificación
+ */
 export type OrderKeys = 'default' | 'updated' | 'added' | 'title' | 'rating';
 
 export interface Options {

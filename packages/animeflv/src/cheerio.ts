@@ -74,7 +74,6 @@ export function getInformation(html: string): Information {
     for (const target of matches) {
       const episode = target.match(/\[(\d+),\d+\]/);
 
-      // TODO: add test for this ?
       if (episode === null) return;
 
       if (episode[1] != null) {

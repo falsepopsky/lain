@@ -11,12 +11,79 @@ export interface Title extends TitleMobile {
   description: string;
 }
 
-type InformationOmit = Omit<Title, 'slug' | 'type'>;
+export interface Information extends Omit<Title, 'slug'> {
+  status: string;
+  alternativeTitles: string[];
+  relatedTitles: Record<'title' | 'sufix', string>[];
+  genres: string[];
+  episodes: string[];
+}
 
-export interface InformationMobile extends InformationOmit {
+export interface InformationMobile extends Omit<Title, 'slug' | 'type'> {
   status: string;
   genres: string[];
   episodes: string[];
+}
+
+/**
+ * @description Retrieves the information of the title/anime for the path "anime" on the desktop site.
+ * @param html - Plain html text.
+ * @returns Returns an object containing the following properties: `title`, `alternativeTitles`, `related`, `cover`, `genres`, `type`, `status`, `description` and `episodes`.
+ */
+export function getInformation(html: string): Information {
+  const cheerioInstance = load(html);
+  const genres: string[] = [];
+  const episodes: string[] = [];
+  const alternativeTitles: string[] = [];
+  const relatedTitles: Record<'title' | 'sufix', string>[] = [];
+
+  const title = cheerioInstance('h1').text();
+  const description = cheerioInstance('.Description p').text();
+  const status = cheerioInstance('.AnmStts').text();
+  const type = cheerioInstance('.Type').text();
+  const cover = cheerioInstance('.AnimeCover img').attr('src') ?? '';
+
+  cheerioInstance('.TxtAlt').each((_i, node) => {
+    const alternative = cheerioInstance(node).text();
+    alternativeTitles.push(alternative);
+  });
+
+  cheerioInstance('.ListAnmRel li').each((_i, node) => {
+    const title = cheerioInstance(node).text().replace('(', ' (');
+    const sufix = cheerioInstance(node).find('a').attr('href') ?? '';
+
+    relatedTitles.push({ title, sufix });
+  });
+
+  cheerioInstance('.Nvgnrs a').each((_i, node) => {
+    const genre = cheerioInstance(node).text();
+    genres.push(genre);
+  });
+
+  cheerioInstance('script:not([src])').each((_index, element) => {
+    const scriptContent = cheerioInstance(element).html();
+
+    // early return if is null or doesn't include episodes
+    if (scriptContent === null || !scriptContent.includes('episodes')) return;
+
+    // match the episodes from 2D array.
+    const matches = scriptContent.match(/\[(\d+),\d+\]/g);
+
+    if (matches === null) return;
+
+    for (const target of matches) {
+      const episode = target.match(/\[(\d+),\d+\]/);
+
+      // TODO: add test for this ?
+      if (episode === null) return;
+
+      if (episode[1] != null) {
+        episodes.push(episode[1]);
+      }
+    }
+  });
+
+  return { title, alternativeTitles, relatedTitles, description, status, type, cover, genres, episodes };
 }
 
 /**

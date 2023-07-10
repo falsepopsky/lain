@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
   "files": [
@@ -25,11 +24,10 @@
     "build": "tsc --project tsconfig.build.json"
   },
   "devDependencies": {
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.4.1",
     "cheerio": "1.0.0-rc.12",
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
-    "undici": "^5.22.1"
+    "typescript": "^5.1.6"
   },
   "peerDependencies": {
     "cheerio": "^1.0.0-rc.12"

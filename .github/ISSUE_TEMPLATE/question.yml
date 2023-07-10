@@ -1,0 +1,29 @@
+name: Question ❓
+description: Usage question or discussion about the package.
+title: '[Question]: '
+labels: ['question ❓']
+assignees: 'falsepopsky'
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please note that this issue tracker is specifically for questions and discussions related to the package itself.
+        When asking your question, please provide as much relevant detail as possible to help us understand and assist you better. We appreciate your engagement and look forward to addressing your question!.
+  - type: dropdown
+    attributes:
+      label: Package
+      description: Which package(s) are you using?
+      multiple: true
+      options:
+        - '@untidy/animeflv'
+        - '@untidy/jkanime'
+    validations:
+      required: true
+  - type: textarea
+    id: question-summary
+    attributes:
+      label: Question about the package(s)
+      description: 'Let us know how we can assist you!'
+    validations:
+      required: true

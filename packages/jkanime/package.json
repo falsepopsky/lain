@@ -26,8 +26,7 @@
   },
   "devDependencies": {
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
-    "undici": "^5.22.1"
+    "typescript": "^5.1.6"
   },
   "engines": {
     "node": ">=18",
@@ -40,5 +39,6 @@
   },
   "bugs": {
     "url": "https://github.com/falsepopsky/lain/issues"
-  }
+  },
+  "homepage": "https://github.com/falsepopsky/lain/blob/main/packages/jkanime/README.md"
 }

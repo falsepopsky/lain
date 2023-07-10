@@ -5,7 +5,21 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./url": {
+      "types": "./dist/url.d.ts",
+      "import": "./dist/url.js"
+    },
+    "./cheerio": {
+      "types": "./dist/cheerio.d.ts",
+      "import": "./dist/cheerio.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist",
     "LICENSE",
@@ -48,5 +62,6 @@
   },
   "bugs": {
     "url": "https://github.com/falsepopsky/lain/issues"
-  }
+  },
+  "homepage": "https://github.com/falsepopsky/lain/blob/main/packages/animeflv/README.md"
 }

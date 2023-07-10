@@ -27,8 +27,7 @@
     "@types/node": "^20.4.1",
     "cheerio": "1.0.0-rc.12",
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
-    "undici": "^5.22.1"
+    "typescript": "^5.1.6"
   },
   "peerDependencies": {
     "cheerio": "^1.0.0-rc.12"

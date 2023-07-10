@@ -44,6 +44,11 @@ export type GenreKeys =
 
 export type TypeKeys = 'tv' | 'special' | 'movie' | 'ova';
 
+/**
+ - 1 = En emisión
+ - 2 = Finalizado
+ - 3 = Próximamente
+ */
 export type StatusKeys = '1' | '2' | '3';
 
 export type OrderKeys = 'default' | 'updated' | 'added' | 'title' | 'rating';
@@ -57,18 +62,19 @@ export interface Options {
   page?: string;
 }
 
-export interface TitleOptions {
-  title: string;
-  page?: string;
-}
+export type OriginURL = 'https://www3.animeflv.net/' | 'https://m.animeflv.net/';
 
 /**
  * @description Generates a URL for applying filters.
  * @param options - An object containing the filter options.
+ * @param origin - Select the URL origin for animeflv.
+ * @throws Will throw an error if `origin` is not set.
  * @returns The URL with the supported filter queries applied.
  */
-export function browseFilter(options: Options): string {
-  const query = new URL('browse', 'https://www3.animeflv.net/');
+export function browseFilter(options: Options, origin: OriginURL): string {
+  if (typeof origin != 'string') throw new Error('Set the URL origin');
+
+  const query = new URL('browse', origin);
 
   if (typeof options === 'object' && !Array.isArray(options)) {
     for (const [key, value] of Object.entries(options as Record<string, string | string[] | undefined>)) {
@@ -88,11 +94,15 @@ export function browseFilter(options: Options): string {
 /**
  * @description Generates a URL for browsing a specific title/anime.
  * @param title - The name of the title/anime.
+ * @param origin - Select the URL origin for animeflv.
  * @param page - Optional. The page number for pagination.
+ * @throws Will throw an error if `origin` is not set.
  * @returns The URL with the query parameters for the specified title/anime.
  */
-export function browseAnime(title: string, page?: string): string {
-  const query = new URL('browse', 'https://www3.animeflv.net/');
+export function browseAnime(title: string, origin: OriginURL, page?: string): string {
+  if (typeof origin != 'string') throw new Error('Set the URL origin');
+
+  const query = new URL('browse', origin);
 
   if (typeof title === 'string' && title.length != 0) {
     query.searchParams.set('q', title);

@@ -160,7 +160,7 @@ export function getTitlesMobile(html: string): TitleMobile[] {
  * @description Allows retrieving the pagination for the path "browse". Works on desktop and mobile site.
  * @param html - Plain html text.
  * @returns Returns an array from the pagination containing suffix pages.
- * Example: ['/browse?page=1', '/browse?page=2']
+ * - example: ['/browse?page=1', '/browse?page=2']
  */
 export function getPages(html: string): string[] {
   const pages: string[] = [];

@@ -11,10 +11,9 @@ Monorepo containing web scraping tools for anime sites.
 
 ## :shield: Security
 
-To view our Security Policy, please refer to the [security report system.](.github/SECURITY.md)
+To view our Security Policy, please refer to the [security report system](.github/SECURITY.md).
 
 ## :scroll: License
 
-`lain` and their packages are licensed under the
-[Apache-2.0](https://github.com/falsepopsky/lain/blob/main/LICENSE) license - © 2023
+`lain` and their packages are licensed under the [Apache-2.0](LICENSE) license - © 2023
 [falsepopsky](https://github.com/falsepopsky).

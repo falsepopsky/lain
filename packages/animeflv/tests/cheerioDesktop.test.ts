@@ -1,5 +1,13 @@
-import { animeEmision, animeFinalizado, browse, browseQuery, browseQueryPageTen, fake } from '../fixtures/index.js';
-import { getInformation, getPages, getTitles } from '../src/index.js';
+import {
+  animeEmision,
+  animeFinalizado,
+  browse,
+  browseQuery,
+  browseQueryPageTen,
+  fake,
+  verPelicula,
+} from '../fixtures/index.js';
+import { getInformation, getPages, getTitles, getVideos } from '../src/index.js';
 
 describe('getTitles()', () => {
   describe('Fixture: browse', () => {
@@ -261,6 +269,54 @@ describe('getInformation()', () => {
       );
 
       expect(animeWithoutCover.cover).toBe('');
+    });
+  });
+});
+
+describe('getVideos()', () => {
+  describe('Fixture: verPelicula', () => {
+    const videos = getVideos(verPelicula);
+
+    it('Should return an array of objects', () => {
+      expect(Array.isArray(videos)).toBe(true);
+      expect(videos).toHaveLength(8);
+    });
+
+    it('Should have the expected keys in the video object', () => {
+      for (const video of videos) {
+        expect(video).toHaveProperty('server');
+        expect(video).toHaveProperty('url');
+      }
+    });
+  });
+
+  describe('Fixture: no title key', () => {
+    const videos = getVideos(`<script type="text/javascript">
+var videos = {"SUB":[{"server":"mega","server":"MEGA","ads":0,"url":"https://mega.nz/#!4SVykKgK!","allow_mobile":true,"code":"https://mega.nz/embed#!4SVykKgK!"},{"server":"sw","server":"SW","ads":0,"allow_mobile":true,"code":"https://streamwish.to/e/em4c79vzgk2s"},{"server":"yu","server":"YourUpload","ads":0,"allow_mobile":true,"code":"https://www.yourupload.com/embed/258DOp"},{"server":"sb","server":"SB","ads":0,"allow_mobile":true,"code":"https://embedsb.com/e/3jtngta.html"},{"server":"okru","server":"Okru","ads":0,"allow_mobile":true,"code":"https://ok.ru/videoembed/6658484492"},{"server":"maru","server":"Maru","ads":0,"allow_mobile":true,"code":"https://my.mail.ru/video/embed/7512951190#aylaz9ymde#4598"},{"server":"netu","server":"Netu","ads":1,"allow_mobile":true,"code":"https://hqq.tv/player/embed_player.php?vid=WkJXbS94QXE2ZmZz09"},{"server":"stape","server":"Stape","ads":1,"url":"https://streamtape.com/v/zDXXzTYBqJ/","allow_mobile":true,"code":"https://streamtape.com/e/zDG2e26XXzTYBqJ/"}]};
+</script>`);
+
+    it('Should return and empty array', () => {
+      expect(videos).toHaveLength(0);
+    });
+  });
+
+  describe('Fixture: no code key', () => {
+    const videos = getVideos(`<script type="text/javascript">
+var videos = {"SUB":[{"server":"mega","server":"MEGA","ads":0,"url":"https://ma.nz/#!4SVykKgK!htaJfIxbeXaYAxqut-e4U","allow_mobile":true,"servers":"https://mea.nz/embed#!4SVykKgK!htaJfIxbeXaYAxqut-e4U"},{"server":"sw","server":"SW","ads":0,"allow_mobile":true,"servers":"https://strwish.to/e/em4c79vzgk2s"},{"server":"yu","server":"YourUpload","ads":0,"allow_mobile":true,"servers":"https://www.youupload.com/emd/8DOpkFK635"},{"server":"sb","server":"SB","ads":0,"allow_mobile":true,"servers":"https://embedsb.com/e/3jtng5u8.html"},{"server":"okru","server":"Okru","ads":0,"allow_mobile":true,"servers":"https://ok.ru/videoembed/665872492"},{"server":"maru","server":"Maru","ads":0,"allow_mobile":true,"servers":"https://my.mail.ru/video/embed/7512958666#aylaz9ymde#4598"},{"server":"netu","server":"Netu","ads":1,"allow_mobile":true,"servers":"https://hqq.tv/player/embed_player.php?vid=WkJXbSZThtME5PdXhOZlZmZz09"},{"server":"stape","server":"Stape","ads":1,"url":"https://streamtape.com/v/zDGXXzTYBqJ/","allow_mobile":true,"servers":"https://streamtape.com/e/zDGTYBqJ/"}]};
+</script>`);
+
+    it('Should return and empty array', () => {
+      expect(videos).toHaveLength(0);
+    });
+  });
+
+  describe('Fixture: Not equal length for title and code', () => {
+    const videos = getVideos(`<script type="text/javascript">
+    var videos = {"SUB":[{"server":"mega","title":"MEGA","ads":0,"url":"https://mega.nz/#!4SVykKgK!htaJfIxbeXaYAxqut-EtRHVsXXriWpMzAojSILE-e4U","allow_mobile":true,"code":"https://mega.nz/embed#!4SVykKgK!htaJfIxbeXaYAxqut-EtpMzAojSILE-e4U"},{"server":"sw","title":"SW","ads":0,"allow_mobile":true,"code":"https://streamwish.to/e/e9vzgk2s"},{"server":"yu","title":"YourUpload","ads":0,"allow_mobile":true,"code":"https://www.yourupload.com/embed/258kFK635"},{"server":"sb","title":"SB","ads":0,"allow_mobile":true,"code":"https://embedsb.com/e/3jtngtadn5u8.html"},{"server":"okru","title":"Okru","ads":0,"allow_mobile":true,"code":"https://ok.ru/videoembed/6658484472492"},{"server":"maru","title":"Maru","ads":0,"allow_mobile":true,"code":"https://my.mail.ru/video/embed/751296216051190#aylaz9ymde#4598"},{"server":"netu","title":"Netu","ads":1,"allow_mobile":true,"code":"https://hqq.tv/player/emd_player.php?vid=WkJXbS94QPdXhOZlZmZz09"},{"server":"stape","title":"Stape","ads":1,"url":"https://streamtape.com/v/zDG2ezTYBqJ/","allow_mobile":true,"wrong":"https://streamtape.com/e/zDG2eYBqJ/"}]};
+    </script>`);
+
+    it('Should return and empty array', () => {
+      expect(videos).toHaveLength(0);
     });
   });
 });

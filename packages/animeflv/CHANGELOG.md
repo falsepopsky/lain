@@ -1,5 +1,14 @@
 # @untidy/animeflv
 
+## 0.2.0
+
+### Minor Changes
+
+- ef3b469: feat: getVideos()
+
+  - Allows retrieving the videos(links and server name) for the path "ver". Works on desktop and
+    mobile site.
+
 ## 0.1.1
 
 ### Patch Changes

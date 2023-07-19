@@ -2,7 +2,7 @@
   - 'packages/*/README.md'
   - 'README.md'
 '🧪 tests':
-  - 'packages/*/tests/*.{ts}'
+  - 'packages/*/tests/*.ts'
 '📦 animeflv':
   - 'packages/animeflv/**'
 '📦 jkanime':

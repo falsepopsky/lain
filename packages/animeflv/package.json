@@ -3,8 +3,6 @@
   "description": "web scraping tools for animeflv site",
   "version": "0.2.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

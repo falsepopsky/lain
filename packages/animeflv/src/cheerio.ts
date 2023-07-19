@@ -25,6 +25,11 @@ export interface InformationMobile extends Omit<Title, 'slug' | 'type'> {
   episodes: string[];
 }
 
+export interface Video {
+  server?: string;
+  url?: string;
+}
+
 /**
  * @description Retrieves the information of the title/anime for the path "anime" on the desktop site.
  * @param html - Plain html text.
@@ -116,7 +121,7 @@ export function getInformationMobile(html: string): InformationMobile {
 /**
  * @description Retrieves the titles for the path "browse" on the desktop site.
  * @param html - Plain html text.
- * @returns Returns an Array of objects with the following properties: `title`, `slug`, `type`, `description` and `cover`.
+ * @returns An array of objects with the following properties: `title`, `slug`, `type`, `description` and `cover`.
  */
 export function getTitles(html: string): Title[] {
   const titles: Title[] = [];
@@ -138,7 +143,7 @@ export function getTitles(html: string): Title[] {
 /**
  * @description Retrieves the titles for the path "browse" on the mobile site.
  * @param html - Plain html text.
- * @returns Returns an Array of objects with the following properties: `title`, `slug`, `type` and `cover`.
+ * @returns An array of objects with the following properties: `title`, `slug`, `type` and `cover`.
  */
 export function getTitlesMobile(html: string): TitleMobile[] {
   const titles: TitleMobile[] = [];
@@ -157,10 +162,11 @@ export function getTitlesMobile(html: string): TitleMobile[] {
 }
 
 /**
- * @description Allows retrieving the pagination for the path "browse". Works on desktop and mobile site.
+ * @description Get pagination suffix pages for the path "browse" by parsing the given HTML.
+ * Works on both desktop and mobile sites.
  * @param html - Plain html text.
- * @returns Returns an array from the pagination containing suffix pages.
- * - example: ['/browse?page=1', '/browse?page=2']
+ * @returns An array of strings containing the suffix pages for the pagination.
+ * - Example: ['/browse?page=1', '/browse?page=2']
  */
 export function getPages(html: string): string[] {
   const pages: string[] = [];
@@ -176,4 +182,40 @@ export function getPages(html: string): string[] {
   });
 
   return pages;
+}
+
+/**
+ * @description Allows retrieving the videos for the path "ver". Works on desktop and mobile site.
+ * @param html - Plain html text.
+ * @returns An array of objects containing the server name and the URL.
+ */
+export function getVideos(html: string): Video[] {
+  const videos: Video[] = [];
+
+  const cheerioInstance = load(html);
+
+  cheerioInstance('script:not([src])').each((_index, element) => {
+    const scriptContent = cheerioInstance(element).html();
+
+    // early return if is null or doesn't include episodes
+    if (scriptContent === null || !scriptContent.includes('SUB')) return;
+
+    const titleObjects = scriptContent.match(/"title"\s*:\s*"([^"]+)"/g);
+    const codeObjects = scriptContent.match(/"code"\s*:\s*"([^"]+)"/g);
+
+    if (!titleObjects || !codeObjects) return;
+    if (titleObjects.length !== codeObjects.length) return;
+
+    const titles = titleObjects.map((title) => title.replace(/"/g, '').replace('title:', ''));
+    const links = codeObjects.map((code) => code.replace(/"/g, '').replace('code:', ''));
+
+    for (let i = 0; i < titles.length; i++) {
+      videos.push({
+        server: titles[i],
+        url: links[i],
+      });
+    }
+  });
+
+  return videos;
 }

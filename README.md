@@ -1,5 +1,11 @@
 # lain
 
+<details><summary>No matter where you go, everyone's connected.</summary>
+
+![alt text](/docs/public/tv.gif)
+
+</details>
+
 Monorepo containing web scraping tools for anime sites.
 
 ## :package: Packages

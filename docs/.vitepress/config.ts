@@ -1,26 +1,31 @@
 import { defineConfig } from 'vitepress';
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'lain monorepo',
+  title: 'lain',
   description: 'web scraping tools for anime sites',
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-    ],
+  cleanUrls: true,
 
+  themeConfig: {
+    nav: [{ text: 'Guide', link: '/guide' }],
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Guide',
+        collapsed: false,
+        items: [{ text: 'Quick Start', link: '/guide' }],
+      },
+      {
+        text: '@untidy/animeflv',
+        collapsed: false,
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          { text: 'Introduction', link: '/animeflv/' },
+          { text: 'Cheerio', link: '/animeflv/cheerio' },
+          { text: 'URL', link: '/animeflv/url' },
         ],
       },
     ],
-
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/falsepopsky/lain' }],
+    search: {
+      provider: 'local',
+    },
   },
 });

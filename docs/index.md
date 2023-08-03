@@ -1,23 +1,28 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: 'lain monorepo'
+  name: 'lain'
   tagline: web scraping tools for anime sites
+  image:
+    src: /tv.gif
+    alt: lain gif
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /guide
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/falsepopsky/lain
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: animeflv
+    details:
+      Create URL queries to search for a specific title/anime or apply filters based on criteria
+      like year, genre, etc. Additionally, you can retrieve data such as title, cover, total
+      episodes, video streaming links, and more.
+    link: /animeflv/
+    linkText: Getting Started
+  - title: jkanime
+    details: Under development
 ---

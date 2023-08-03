@@ -12,8 +12,8 @@ Web scraping tools for the [animeflv](https://www3.animeflv.net/) site.
 
 ## :sparkles: Features
 
-- Built with TypeScript for full typing support
-- ESM only
+- Built with TypeScript for full typing support.
+- ESM only.
 - Uses `cheerio` to retrieve data for paths `browse`, `anime`, `ver` (for both mobile and desktop
   sites).
 - Utilizes the built-in `URL` module from `node` to create queries in the `browse` path (for both
@@ -42,7 +42,8 @@ pnpm add @untidy/animeflv
 ## :beginner: Usage
 
 `@untidy/animeflv` is easy to use, The following example demonstrates how to retrieve the URL for
-recently updated movies in the year 2023.
+recently updated movies in the year 2023. For more examples with other APIs, please refer to the
+[Docs](#page_facing_up-docs) section.
 
 Example usage:
 
@@ -63,11 +64,9 @@ const options: Options = {
 const target = browseFilter(options, origin);
 ```
 
-For more examples with other APIs, please refer to the "Docs" section.
-
 ## :page_facing_up: Docs
 
-Under construction 🚧
+[API](https://lain-packages.netlify.app/animeflv/)
 
 ## :scroll: License
 

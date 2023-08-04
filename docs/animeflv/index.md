@@ -19,6 +19,13 @@ To successfully utilize this package, users must meet the following prerequisite
 - **Node.js:** The user must have [Node.js](https://nodejs.org) installed on their system with a
   minimum version of 18.
 
+::: info INFO
+
+This package utilizes [cheerio](https://github.com/cheeriojs/cheerio) for data retrieval. If you
+intend to use the cheerio module, make sure to install it.
+
+:::
+
 ## Installation
 
 Use your preferred package manager

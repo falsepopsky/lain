@@ -17,6 +17,7 @@ Retrieves the information of the title/anime for the path `anime` on the mobile 
 {
   title: string;
   description: string;
+  type: string;
   cover: string;
   status: string;
   genres: string[];
@@ -68,6 +69,14 @@ Here, we present the current sources from which this function retrieves data for
   ::: details This takes the actual cover/banner of the title
 
   ![cover target](/afgim/cover.png)
+
+  :::
+
+- type
+
+  ::: details Type of the title
+
+  ![type target](/afgim/type.png)
 
   :::
 

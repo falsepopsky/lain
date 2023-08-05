@@ -3,8 +3,6 @@
   "description": "web scraping tools for animeflv site",
   "version": "0.2.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -38,7 +36,7 @@
     "build": "tsc --project tsconfig.build.json"
   },
   "devDependencies": {
-    "@types/node": "^20.4.2",
+    "@types/node": "^20.4.8",
     "cheerio": "1.0.0-rc.12",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
@@ -63,5 +61,5 @@
   "bugs": {
     "url": "https://github.com/falsepopsky/lain/issues"
   },
-  "homepage": "https://github.com/falsepopsky/lain/blob/main/packages/animeflv/README.md"
+  "homepage": "https://lain-packages.netlify.app/animeflv/"
 }

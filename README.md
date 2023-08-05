@@ -2,12 +2,18 @@
 
 Monorepo containing web scraping tools for anime sites.
 
+<details><summary>No matter where you go, everyone's connected.</summary>
+
+![alt text](/docs/public/tv.gif)
+
+</details>
+
 ## :package: Packages
 
 | packages                                 | Site     | Docs                                    |
 | :--------------------------------------- | :------- | :-------------------------------------- |
 | [@untidy/animeflv](./packages/animeflv/) | animeflv | [Readme](./packages/animeflv/README.md) |
-| [@untidy/jkanime](./packages/jkanime/)   | jkanime  | 🚧                                      |
+| [@untidy/jkanime](./packages/jkanime/)   | jkanime  | :construction:                          |
 
 ## :shield: Security
 

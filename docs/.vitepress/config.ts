@@ -18,7 +18,18 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Introduction', link: '/animeflv/' },
-          { text: 'Cheerio', link: '/animeflv/cheerio' },
+          {
+            text: 'Cheerio',
+            link: '/animeflv/cheerio',
+            items: [
+              { text: 'getInformation', link: '/animeflv/getinformation' },
+              { text: 'getInformationMobile', link: '/animeflv/getinformationm' },
+              { text: 'getTitles', link: '/animeflv/gettitles' },
+              { text: 'getTitlesMobile', link: '/animeflv/gettitlesm' },
+              { text: 'getPages', link: '/animeflv/getpages' },
+              { text: 'getVideos', link: '/animeflv/getvideos' },
+            ],
+          },
           { text: 'URL', link: '/animeflv/url' },
         ],
       },

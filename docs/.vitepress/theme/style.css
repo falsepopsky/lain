@@ -57,9 +57,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-info-bg: #c8ffc8;
 }
 
 .dark {
@@ -75,4 +73,8 @@
   --vp-button-brand-hover-bg: var(--vp-button-brand-bg);
   --vp-custom-block-danger-text: rgb(251, 113, 133);
   --vp-custom-block-danger-bg: rgba(251, 113, 133, 0.1);
+
+  --vp-custom-block-info-border: rgba(52, 211, 153, 0.2);
+  --vp-custom-block-info-text: rgb(52, 211, 153);
+  --vp-custom-block-info-bg: rgba(52, 211, 153, 0.1);
 }

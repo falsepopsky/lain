@@ -64,7 +64,19 @@ export interface Options {
   genre?: GenreKeys | GenreKeys[];
   year?: string | string[];
   type?: TypeKeys | TypeKeys[];
+  /**
+   * - 1 = En emisión
+   * - 2 = Finalizado
+   * - 3 = Próximamente
+   */
   status?: StatusKeys | StatusKeys[];
+  /**
+   * - default = Por Defecto
+   * - updated = Recientemente Actualizados
+   * - added = Recientemente Agregados
+   * - title = Nombre A-Z
+   * - rating = Calificación
+   */
   order?: OrderKeys;
   page?: string;
 }

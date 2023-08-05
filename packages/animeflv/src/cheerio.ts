@@ -19,7 +19,7 @@ export interface Information extends Omit<Title, 'slug'> {
   episodes: string[];
 }
 
-export interface InformationMobile extends Omit<Title, 'slug' | 'type'> {
+export interface InformationMobile extends Omit<Title, 'slug'> {
   status: string;
   genres: string[];
   episodes: string[];
@@ -31,7 +31,7 @@ export interface Video {
 }
 
 /**
- * @description Retrieves the information of the title/anime for the path "anime" on the desktop site.
+ * @description Retrieves the information of the title/anime for the path `/anime/:title` on the desktop site.
  * @param html - Plain html text.
  * @returns Returns an object containing the following properties: `title`, `alternativeTitles`, `related`, `cover`, `genres`, `type`, `status`, `description` and `episodes`.
  */
@@ -91,9 +91,9 @@ export function getInformation(html: string): Information {
 }
 
 /**
- * @description Retrieves the information of the title/anime for the path "anime" on the mobile site.
+ * @description Retrieves the information of the title/anime for the path `/anime/:title` on the mobile site.
  * @param html - Plain html text.
- * @returns Returns an object containing the following properties: `title`, `cover`, `genres`, `status`, `description` and `episodes`.
+ * @returns Returns an object containing the following properties: `title`, `type`, `cover`, `genres`, `status`, `description` and `episodes`.
  */
 export function getInformationMobile(html: string): InformationMobile {
   const cheerioInstance = load(html);
@@ -104,6 +104,7 @@ export function getInformationMobile(html: string): InformationMobile {
   const status = cheerioInstance('.Anime header p:eq(0) strong:eq(1)').text();
   const description = cheerioInstance('.Anime header p:eq(1)').text().replace('Sinopsis:', '');
   const cover = cheerioInstance('.Anime img').attr('src') ?? '';
+  const type = cheerioInstance('.Image span:eq(0)').text();
 
   cheerioInstance('.Tag').each((_i, node) => {
     const genre = cheerioInstance(node).text();
@@ -115,7 +116,7 @@ export function getInformationMobile(html: string): InformationMobile {
     episodes.push(episode);
   });
 
-  return { title, description, status, cover, genres, episodes };
+  return { title, description, status, type, cover, genres, episodes };
 }
 
 /**

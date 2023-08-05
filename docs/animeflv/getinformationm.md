@@ -17,6 +17,7 @@ Retrieves the information of the title/anime for the path `anime` on the mobile 
 {
   title: string;
   description: string;
+  type: string;
   cover: string;
   status: string;
   genres: string[];
@@ -71,6 +72,14 @@ Here, we present the current sources from which this function retrieves data for
 
   :::
 
+- type
+
+  ::: details Type of the title
+
+  ![type target](/afgim/type.png)
+
+  :::
+
 - genres
 
   ::: details Genres of the title
@@ -109,6 +118,7 @@ const data = getInformationMobile(html);
   title: 'Mushoku Tensei II: Isekai Ittara Honki Dasu',
   description: 'Segunda temporada de Mushoku Tensei: Isekai Ittara Honki Dasu',
   status: 'En emisión',
+  type: 'Anime',
   cover: '/uploads/animes/covers/3825.jpg',
   genres: ['Drama', 'Ecchi', 'Fantasía'],
   episodes: ['/ver/mushoku-tensei-ii-isekai-ittara-honki-dasu-0']

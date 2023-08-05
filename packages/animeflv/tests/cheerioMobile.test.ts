@@ -164,6 +164,7 @@ describe('getInformationMobile()', () => {
       expect(information.status).toBe('En emisión');
       expect(information.description).toBe('Segunda temporada de Mushoku Tensei: Isekai Ittara Honki Dasu');
       expect(information.cover).toBe('/uploads/animes/covers/3825.jpg');
+      expect(information.type).toBe('Anime');
     });
   });
 
@@ -187,6 +188,7 @@ describe('getInformationMobile()', () => {
         `Cuenta la historia de un grupo de jóvenes guerreros denominados Santos (o caballeros en varias traducciones), quienes luchan por proteger a la diosa griega Atenea de las fuerzas del mal. Para luchar, los Santos sólo utilizan su energía interior (denominada cosmos), sus puños y armaduras que les sirven de protección y que además están inspiradas en constelaciones o seres de la mitología griega y escandinava.`
       );
       expect(information.cover).toBe('/uploads/animes/covers/326.jpg');
+      expect(information.type).toBe('Anime');
     });
   });
 

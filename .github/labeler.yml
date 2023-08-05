@@ -1,4 +1,5 @@
 '📚 docs':
+  - 'docs/**'
   - 'packages/*/README.md'
   - 'README.md'
 '🧪 tests':

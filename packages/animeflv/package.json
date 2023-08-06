@@ -19,9 +19,7 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "keywords": [
     "animeflv"

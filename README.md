@@ -13,7 +13,7 @@ Monorepo containing web scraping tools for anime sites.
 | packages                                 | Site     | Docs                                    |
 | :--------------------------------------- | :------- | :-------------------------------------- |
 | [@untidy/animeflv](./packages/animeflv/) | animeflv | [Readme](./packages/animeflv/README.md) |
-| [@untidy/jkanime](./packages/jkanime/)   | jkanime  | :construction:                          |
+| [@untidy/jkanime](./packages/jkanime/)   | jkanime  | [Readme](./packages/jkanime/README.md)  |
 
 ## :shield: Security
 

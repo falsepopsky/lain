@@ -99,6 +99,9 @@ importers:
 
   packages/jkanime:
     devDependencies:
+      cheerio:
+        specifier: 1.0.0-rc.12
+        version: 1.0.0-rc.12
       tsx:
         specifier: ^3.12.7
         version: 3.12.7

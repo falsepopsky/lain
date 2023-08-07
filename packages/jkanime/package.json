@@ -1,7 +1,6 @@
 {
   "name": "@untidy/jkanime",
   "description": "web scraping tools for jkanime site",
-  "private": true,
   "version": "0.0.1",
   "type": "module",
   "exports": {
@@ -9,12 +8,14 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./cheerio": {
+      "types": "./dist/cheerio.d.ts",
+      "import": "./dist/cheerio.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
   "keywords": [
     "jkanime"
@@ -30,7 +31,16 @@
   },
   "devDependencies": {
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "cheerio": "1.0.0-rc.12"
+  },
+  "peerDependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "peerDependenciesMeta": {
+    "cheerio": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">=18",
@@ -44,5 +54,5 @@
   "bugs": {
     "url": "https://github.com/falsepopsky/lain/issues"
   },
-  "homepage": "https://github.com/falsepopsky/lain/blob/main/packages/jkanime/README.md"
+  "homepage": "https://lain-packages.netlify.app/jkanime/"
 }

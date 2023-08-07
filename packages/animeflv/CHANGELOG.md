@@ -1,5 +1,12 @@
 # @untidy/animeflv
 
+## 0.2.1
+
+### Patch Changes
+
+- 43d5177: fix: add description for `order` and `status` in their types.
+- b1ec17e: Allow getInformationMobile to get the type of the title: anime, ova, etc.
+
 ## 0.2.0
 
 ### Minor Changes

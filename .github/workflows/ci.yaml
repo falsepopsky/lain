@@ -7,21 +7,24 @@ on:
     branches:
       - main
 
+env:
+  PNPM_VERSION: 8.9.2
+
 jobs:
   lint:
     name: ⬣ Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.1.0
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
-          version: 8.6.12
+          version: ${{ env.PNPM_VERSION }}
       - name: Setup Node
-        uses: actions/setup-node@v3.8.0
+        uses: actions/setup-node@v3.8.1
         with:
-          node-version: 18.x
+          node-version-file: ".nvmrc"
           cache: pnpm
 
       - name: Install dependencies
@@ -34,15 +37,15 @@ jobs:
     needs: [lint]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.1.0
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
-          version: 8.6.12
+          version: ${{ env.PNPM_VERSION }}
       - name: Setup Node
-        uses: actions/setup-node@v3.8.0
+        uses: actions/setup-node@v3.8.1
         with:
-          node-version: 18.x
+          node-version-file: ".nvmrc"
           cache: pnpm
 
       - name: Install dependencies
@@ -55,15 +58,15 @@ jobs:
     needs: [lint, test]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.1.0
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
-          version: 8.6.12
+          version: ${{ env.PNPM_VERSION }}
       - name: Setup Node
-        uses: actions/setup-node@v3.8.0
+        uses: actions/setup-node@v3.8.1
         with:
-          node-version: 18.x
+          node-version-file: ".nvmrc"
           cache: pnpm
 
       - name: Install dependencies

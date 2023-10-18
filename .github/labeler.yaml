@@ -1,0 +1,14 @@
+"📚 docs":
+  - "docs/**"
+  - "packages/*/README.md"
+  - "README.md"
+"🧪 tests":
+  - "packages/*/tests/*.ts"
+"📦 animeflv":
+  - "packages/animeflv/**"
+"📦 jkanime":
+  - "packages/jkanime/**"
+"⚙️ configs":
+  - ".prettierrc"
+  - "jest.config.js"
+  - ".eslintrc.cjs"

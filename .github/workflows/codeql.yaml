@@ -1,5 +1,4 @@
-name: 'CodeQL'
-
+name: CodeQL
 on:
   push:
     branches:
@@ -32,4 +31,4 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:
-          category: '/language:javascript'
+          category: "/language:javascript"

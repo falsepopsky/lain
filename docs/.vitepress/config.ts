@@ -4,7 +4,6 @@ export default defineConfig({
   title: 'lain',
   description: 'web scraping tools for anime sites',
   cleanUrls: true,
-
   themeConfig: {
     nav: [{ text: 'Guide', link: '/guide' }],
     sidebar: [

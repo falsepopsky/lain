@@ -30,9 +30,9 @@
     "build": "tsc --project tsconfig.build.json"
   },
   "devDependencies": {
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
-    "cheerio": "1.0.0-rc.12"
+    "cheerio": "1.0.0-rc.12",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "cheerio": "^1.0.0-rc.12"

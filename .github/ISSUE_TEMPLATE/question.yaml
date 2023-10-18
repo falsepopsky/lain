@@ -1,8 +1,8 @@
 name: Question ❓
 description: Usage question or discussion about the package.
-title: '[Question]: '
-labels: ['question ❓']
-assignees: 'falsepopsky'
+title: "[Question]: "
+labels: ["question ❓"]
+assignees: "falsepopsky"
 
 body:
   - type: markdown
@@ -16,14 +16,14 @@ body:
       description: Which package(s) are you using?
       multiple: true
       options:
-        - '@untidy/animeflv'
-        - '@untidy/jkanime'
+        - "@untidy/animeflv"
+        - "@untidy/jkanime"
     validations:
       required: true
   - type: textarea
     id: question-summary
     attributes:
       label: Question about the package(s)
-      description: 'Let us know how we can assist you!'
+      description: "Let us know how we can assist you!"
     validations:
       required: true

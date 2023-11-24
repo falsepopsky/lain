@@ -24,5 +24,5 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['dist', 'jest.config.js', '*.cjs'],
+  ignorePatterns: ['dist', 'fixtures', 'jest.config.js', '*.cjs'],
 };

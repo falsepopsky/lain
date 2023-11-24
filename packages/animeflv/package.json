@@ -27,7 +27,7 @@
   "author": "falsepopsky",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "tsx ./src/playground.ts",
+    "dev": "tsx ./playground.ts",
     "clean:build": "rm -rf dist",
     "clean:workspace": "rm -rf dist .turbo",
     "prebuild": "pnpm run clean:build",

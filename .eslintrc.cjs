@@ -24,5 +24,5 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['/*', '!/packages', '/packages/eslint-config-lain', '/packages/animeflv/fixtures', 'dist'],
+  ignorePatterns: ['dist', 'fixtures', 'jest.config.js', '*.cjs'],
 };

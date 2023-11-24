@@ -34,10 +34,10 @@
     "build": "tsc --project tsconfig.build.json"
   },
   "devDependencies": {
-    "@types/node": "^20.8.6",
+    "@types/node": "^20.9.5",
     "cheerio": "1.0.0-rc.12",
-    "tsx": "^3.14.0",
-    "typescript": "^5.2.2"
+    "tsx": "^4.4.0",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "cheerio": "^1.0.0-rc.12"

@@ -15,7 +15,7 @@ module.exports = {
       env: { jest: true },
       plugins: ['jest'],
       extends: ['plugin:jest/recommended', 'plugin:jest/style'],
-      files: ['**/*.test.ts', '**/*.spec.ts'],
+      files: ['packages/*/tests/*.test.ts'],
     },
     {
       extends: ['plugin:jsdoc/recommended-typescript-error'],

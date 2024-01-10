@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  PNPM_VERSION: 8.10.5
+  PNPM_VERSION: 8.14.0
 
 jobs:
   lint:
@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
           version: ${{ env.PNPM_VERSION }}
       - name: Setup Node
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.1
         with:
           node-version-file: ".nvmrc"
           cache: pnpm
@@ -37,13 +37,13 @@ jobs:
     needs: [lint]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
           version: ${{ env.PNPM_VERSION }}
       - name: Setup Node
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.1
         with:
           node-version-file: ".nvmrc"
           cache: pnpm
@@ -58,13 +58,13 @@ jobs:
     needs: [lint, test]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
           version: ${{ env.PNPM_VERSION }}
       - name: Setup Node
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.1
         with:
           node-version-file: ".nvmrc"
           cache: pnpm

@@ -74,6 +74,7 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    'n/no-missing-import': 'off',
   },
   reportUnusedDisableDirectives: true,
 };

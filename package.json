@@ -16,7 +16,9 @@
     "publish-packages": "pnpm run build && changeset publish",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "dev:animeflv": "tsx packages/animeflv/playground.ts",
+    "dev:jkanime": "tsx packages/jkanime/playground.ts"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

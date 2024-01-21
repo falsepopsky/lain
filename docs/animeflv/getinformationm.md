@@ -13,7 +13,6 @@ Retrieves the information of the title/anime for the path `anime` on the mobile 
 ::: details Returns an object containing the following data:
 
 ```typescript
-
 {
   title: string;
   description: string;
@@ -23,8 +22,6 @@ Retrieves the information of the title/anime for the path `anime` on the mobile 
   genres: string[];
   episodes: string[];
 }
-
-
 ```
 
 :::

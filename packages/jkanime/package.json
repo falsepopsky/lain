@@ -31,7 +31,6 @@
   },
   "devDependencies": {
     "cheerio": "1.0.0-rc.12",
-    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
@@ -43,8 +42,7 @@
     }
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=8"
+    "node": "^18.17.0 || ^20.0.0"
   },
   "repository": {
     "type": "git",

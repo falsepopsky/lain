@@ -61,5 +61,5 @@ const data = browseFilter(html);
 ## :scroll: License
 
 `@untidy/jkanime` is licensed under the
-[Apache-2.0](https://github.com/falsepopsky/lain/blob/main/LICENSE) license - © 2023
+[Apache-2.0](https://github.com/falsepopsky/lain/blob/main/LICENSE) license - © 2023-2024
 [falsepopsky](https://github.com/falsepopsky).

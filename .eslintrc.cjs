@@ -13,16 +13,5 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json', './packages/*/tsconfig.json'],
   },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts'],
-    },
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: './tsconfig.json',
-      },
-    },
-  },
   ignorePatterns: ['dist', 'fixtures', 'jest.config.js', '*.cjs'],
 };

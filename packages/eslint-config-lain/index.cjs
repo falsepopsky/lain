@@ -3,8 +3,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:n/recommended',
     'plugin:promise/recommended',
     'turbo',
@@ -76,6 +74,7 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    'n/no-missing-import': 'off',
   },
   reportUnusedDisableDirectives: true,
 };

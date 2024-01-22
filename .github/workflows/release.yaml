@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  PNPM_VERSION: 8.14.1
+  PNPM_VERSION: 8.14.2
 jobs:
   release:
     name: 🚀 Release

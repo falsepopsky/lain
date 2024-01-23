@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { browseAnime, browseFilter } from '../src/index.js';
 
 describe('browseAnime()', () => {

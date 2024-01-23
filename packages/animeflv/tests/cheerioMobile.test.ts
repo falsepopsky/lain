@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { MobileAE, MobileAF, MobileBQ, MobileBQPT, MobileBrowse, MobileFake, animeFake } from '../fixtures/index.js';
 import { getInformationMobile, getPages, getTitlesMobile } from '../src/index.js';
 

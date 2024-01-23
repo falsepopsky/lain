@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { horario } from '../fixtures/index.js';
 import { getHorarios } from '../src/index.js';
 

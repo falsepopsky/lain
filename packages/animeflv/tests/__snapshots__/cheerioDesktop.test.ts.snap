@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`getInformation() Fixture: anime en emision should match related titles in relatedTitles 1`] = `
+exports[`getInformation() > Fixture: anime en emision > should match related titles in relatedTitles 1`] = `
 [
   {
     "sufix": "/anime/masamune-kun-no-revenge",
@@ -9,9 +9,9 @@ exports[`getInformation() Fixture: anime en emision should match related titles 
 ]
 `;
 
-exports[`getInformation() Fixture: anime finalizado should match related titles in relatedTitles 1`] = `[]`;
+exports[`getInformation() > Fixture: anime finalizado > should match related titles in relatedTitles 1`] = `[]`;
 
-exports[`getTitles() Fixture: browse Should return titles 1`] = `
+exports[`getTitles() > Fixture: browse > Should return titles 1`] = `
 [
   {
     "cover": "https://animeflv.net/uploads/animes/covers/3816.jpg",
@@ -184,7 +184,7 @@ exports[`getTitles() Fixture: browse Should return titles 1`] = `
 ]
 `;
 
-exports[`getTitles() Fixture: browse-query Should return titles 1`] = `
+exports[`getTitles() > Fixture: browse-query > Should return titles 1`] = `
 [
   {
     "cover": "https://animeflv.net/uploads/animes/covers/1488.jpg",
@@ -238,7 +238,7 @@ exports[`getTitles() Fixture: browse-query Should return titles 1`] = `
 ]
 `;
 
-exports[`getTitles() Fixture: browse-query-page-10 Should return titles 1`] = `
+exports[`getTitles() > Fixture: browse-query-page-10 > Should return titles 1`] = `
 [
   {
     "cover": "https://animeflv.net/uploads/animes/covers/3729.jpg",

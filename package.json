@@ -41,5 +41,5 @@
       "esbuild": "^0.19.11"
     }
   },
-  "packageManager": "pnpm@8.14.2"
+  "packageManager": "pnpm@8.14.3"
 }

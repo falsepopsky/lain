@@ -20,6 +20,6 @@
     "lib": ["es2023"],
     "verbatimModuleSyntax": true
   },
-  "include": [".eslintrc.cjs"],
+  "include": [".eslintrc.cjs", "vitest.config.ts"],
   "exclude": ["node_modules"]
 }

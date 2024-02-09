@@ -11,8 +11,8 @@ module.exports = {
   overrides: [
     {
       env: { jest: true },
-      plugins: ['jest'],
-      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+      plugins: ['vitest'],
+      extends: ['plugin:vitest/recommended'],
       files: ['packages/*/tests/*.test.ts'],
     },
     {

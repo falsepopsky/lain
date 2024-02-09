@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`getTitlesMobile() Fixture browse Should return titles 1`] = `
+exports[`getTitlesMobile() > Fixture browse > Should return titles 1`] = `
 [
   {
     "cover": "/uploads/animes/covers/3821.jpg",
@@ -149,7 +149,7 @@ exports[`getTitlesMobile() Fixture browse Should return titles 1`] = `
 ]
 `;
 
-exports[`getTitlesMobile() Fixture browse-query Should return titles 1`] = `
+exports[`getTitlesMobile() > Fixture browse-query > Should return titles 1`] = `
 [
   {
     "cover": "/uploads/animes/covers/752.jpg",
@@ -208,7 +208,7 @@ exports[`getTitlesMobile() Fixture browse-query Should return titles 1`] = `
 ]
 `;
 
-exports[`getTitlesMobile() Fixture browse-query-page-10 Should return titles 1`] = `
+exports[`getTitlesMobile() > Fixture browse-query-page-10 > Should return titles 1`] = `
 [
   {
     "cover": "/uploads/animes/covers/1366.jpg",

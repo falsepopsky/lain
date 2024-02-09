@@ -13,5 +13,12 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json', './packages/*/tsconfig.json'],
   },
-  ignorePatterns: ['dist', 'fixtures', 'jest.config.js', '*.cjs'],
+  settings: {
+    n: {
+      allowModules: ['vitest'],
+      resolvePaths: [__dirname],
+      tryExtensions: ['.js', '.json', '.node', 'ts'],
+    },
+  },
+  ignorePatterns: ['dist', 'fixtures', '*.cjs'],
 };

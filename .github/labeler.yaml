@@ -15,7 +15,7 @@
 "📦 jkanime":
   - changed-files:
       - any-glob-to-any-file:
-  - "packages/jkanime/**"
+          - "packages/jkanime/**"
 "⚙️ configs":
   - changed-files:
       - any-glob-to-any-file:

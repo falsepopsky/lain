@@ -21,4 +21,4 @@
       - any-glob-to-any-file:
           - ".prettierrc"
           - "vitest.config.ts"
-          - ".eslintrc.cjs"
+          - "eslint.config.js"

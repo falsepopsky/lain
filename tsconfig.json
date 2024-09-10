@@ -18,8 +18,9 @@
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "lib": ["es2023"],
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "types": ["vitest/globals"]
   },
-  "include": [".eslintrc.cjs", "vitest.config.ts"],
-  "exclude": ["node_modules"]
+  "include": ["eslint.config.js", "vitest.config.ts"],
+  "exclude": ["node_modules", "docs"]
 }

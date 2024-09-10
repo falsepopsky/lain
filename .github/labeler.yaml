@@ -1,14 +1,24 @@
 "📚 docs":
-  - "docs/**"
-  - "packages/*/README.md"
-  - "README.md"
+  - changed-files:
+  - any-glob-to-any-file:
+      - "docs/**"
+      - "packages/*/README.md"
+      - "README.md"
 "🧪 tests":
-  - "packages/*/tests/*.ts"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/*/tests/*.ts"
 "📦 animeflv":
-  - "packages/animeflv/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/animeflv/**"
 "📦 jkanime":
-  - "packages/jkanime/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/jkanime/**"
 "⚙️ configs":
-  - ".prettierrc"
-  - "jest.config.js"
-  - ".eslintrc.cjs"
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".prettierrc"
+          - "vitest.config.ts"
+          - "eslint.config.js"

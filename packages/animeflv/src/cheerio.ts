@@ -69,7 +69,7 @@ export function getInformation(html: string): Information {
     const scriptContent = cheerioInstance(element).html();
 
     // early return if is null or doesn't include episodes
-    if (scriptContent === null || !scriptContent.includes('episodes')) return;
+    if (!scriptContent?.includes('episodes')) return;
 
     // match the episodes from 2D array.
     const matches = scriptContent.match(/\[(\d+),\d+\]/g);
@@ -77,7 +77,7 @@ export function getInformation(html: string): Information {
     if (matches === null) return;
 
     for (const target of matches) {
-      const episode = target.match(/\[(\d+),\d+\]/);
+      const episode = /\[(\d+),\d+\]/.exec(target);
 
       if (episode === null) return;
 
@@ -199,7 +199,7 @@ export function getVideos(html: string): Video[] {
     const scriptContent = cheerioInstance(element).html();
 
     // early return if is null or doesn't include episodes
-    if (scriptContent === null || !scriptContent.includes('SUB')) return;
+    if (!scriptContent?.includes('SUB')) return;
 
     const titleObjects = scriptContent.match(/"title"\s*:\s*"([^"]+)"/g);
     const codeObjects = scriptContent.match(/"code"\s*:\s*"([^"]+)"/g);

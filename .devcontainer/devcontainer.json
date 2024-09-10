@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "nodeGypDependencies": true,
-      "version": "20.11.0",
+      "version": "20.17.0",
       "nvmVersion": "latest"
     }
   },
@@ -14,12 +14,11 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "editorconfig.editorconfig",
-        "zixuanchen.vitest-explorer",
-        "pkief.material-icon-theme",
+        "vitest.explorer",
         "github.vscode-github-actions",
         "github.vscode-pull-request-github"
       ]
     }
   },
-  "postCreateCommand": "corepack enable && pnpm install"
+  "postCreateCommand": "corepack enable && corepack pnpm install"
 }
